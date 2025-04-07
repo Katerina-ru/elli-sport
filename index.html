@@ -18,7 +18,7 @@
         <div class="container">
             <div class="slider-container">
                 <video width="550" style="margin-left: 20px; margin-top: 20px;" controls>
-                    <source src="Новый проект (2).mp4" type="video/mp4">
+                    <source src="output(compress-video-online.com).mp4" type="video/mp4">
                 </video>
             </div>
             <!--Призыв к заказу и кнопка -->
@@ -61,6 +61,7 @@
 
                     document.getElementById('data-form').addEventListener('submit', function (event) {
                         event.preventDefault();
+                        
 
                         emailjs.sendForm('service_albkand', 'template_zswmz0j', this)
                             .then(function () {
@@ -69,7 +70,7 @@
                                 alert('Ошибка при отправке: ' + JSON.stringify(error));
                             });
                     });
-                    alert("Данные успешно отправлены!");
+                    //alert("Данные успешно отправлены!");
 
                     modal.style.display = "none";
                 </script>
