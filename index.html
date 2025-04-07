@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Элли-Спорт</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+
+<body>
+    <div id='container' style="width: 900px; height: 2700px; margin:0 auto; background-color: rgb(255, 255, 255);">
+        <!--Шапка, видео-->
+        <img src="hat2.jpg" style="width: 900px; height: auto;">
+        <div class="container">
+            <div class="slider-container">
+                <video width="550" style="margin-left: 20px; margin-top: 20px;" controls>
+                    <source src="Новый проект (2).mp4" type="video/mp4">
+                </video>
+            </div>
+            <!--Призыв к заказу и кнопка -->
+            <div class="order-prompt">
+                <img src="priz.jpg" alt="" style="width: 250px; height: auto; margin-top: 30px; margin-left: 2px;">
+                <div class="group1" style="margin-top: 40px; margin-left: 20px;">
+                    <button id="order-button">Заказать</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Окно сбора данных -->
+        <div id="data-collection" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Введите ваши данные</h3>
+                <form id="data-form">
+                    <br><label for="name">Имя:</label>
+                    <input type="text" id="name" name='name' required style="margin-left: 40px;">
+                    <br>
+                    <br><label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name='phone' required style="margin-left: 5px;">
+                    <br>
+                    <br><label for="region">Регион:</label>
+                    <input type="text" id="region" name='region' required style="margin-left: 20px;">
+                    <br>
+                    <br><label>
+                        <input type="checkbox" required>Даю согласие на сбор и обработку персональных данных в
+                        соответствии с <a href="index1.html" target="_blank">
+                            политикой конфиденциальности</a>
+                    </label>
+                    <br>
+                    <div class="group3"><button type="submit" style="margin-top: 20px; margin-left: 130px;">Отправить
+                            данные</button></div>
+                </form>
+                <script>
+                    (function () {
+                        emailjs.init("qeBwFjTbqWWC_tBSR"); 
+                    })();
+
+                    document.getElementById('data-form').addEventListener('submit', function (event) {
+                        event.preventDefault();
+
+                        emailjs.sendForm('service_albkand', 'template_zswmz0j', this)
+                            .then(function () {
+                                alert('Данные успешно отправлены!');
+                            }, function (error) {
+                                alert('Ошибка при отправке: ' + JSON.stringify(error));
+                            });
+                    });
+                    alert("Данные успешно отправлены!");
+
+                    modal.style.display = "none";
+                </script>
+            </div>
+        </div>
+
+        <img src="preim.jpg" alt="" style="width: 900px; height: auto; margin-top: 20px;">
+        <img src="assort.jpg" style="width: 900px; height: auto;">
+
+        <img src="assortiment1.jpg" style="width: 900px; height: auto; margin-top: 20px;">
+        <div class="gallery-container">
+            <div class="gallery" style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+                <img src="krasn1.jpg" alt="" style="width: 300px; height: auto;">
+                <img src="krasn2.jpg" alt="" style="width: 300px; height: auto;">
+                <img src="sin1.jpg" alt="" style="width: 300px; height: auto;">
+                <img src="sin2.JPG" alt="" style="width: 300px; height: auto;">
+                <img src="sin3.jpg" alt="" style="width: 300px; height: auto;">
+                <img src="sin4.jpg" alt="" style="width: 300px; height: auto;">
+                <img src="zel1.JPG" alt="" style="width: 300px; height: auto;">
+                <img src="zhelt1.jpg" alt="" style="width: 300px; height: auto;">
+                <img src="zhelt2.jpg" alt="" style="width: 300px; height: auto;">
+                <img src="zheltzel.JPG" alt="" style="width: 300px; height: auto;">
+            </div>
+        </div>
+        <img src="sizes.jpg" alt="" style="width: 900px; height: auto; margin-top: 5px;">
+        <img src="scheme.jpg" alt="" style="width: 900px; height: auto; margin-top: 20px;">
+        <img src="scheme1.jpg" style="width: 900px; height: auto; margin-top: 10px;">
+        <img src="ot.jpg" style="width: 900px; height: auto;">
+
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="ot1.jpg" alt="" style="width: 500px; height: auto;"></div>
+                <div class="swiper-slide"><img src="ot2.jpg" alt=""
+                        style="width: 500px; height: auto; margin-top: 30px; margin-left: 5px;"></div>
+                <div class="swiper-slide"><img src="ot3.jpg" alt=""
+                        style="width: 500px; height: auto; margin-top: 10px; margin-left: 5px;"></div>
+                <div class="swiper-slide"><img src="ot4.jpg" alt=""
+                        style="width: 500px; height: auto; margin-left: 5px;"></div>
+                <div class="swiper-slide"><img src="ot5.jpg" alt=""
+                        style="width: 500px; height: auto; margin-top: 10px; margin-left: 5px;"></div>
+                <div class="swiper-slide"><img src="ot6.jpg" alt=""
+                        style="width: 500px; height: auto; margin-left: 5px;"></div>
+                <div class="swiper-slide"><img src="ot7.jpg" alt=""
+                        style="width: 500px; height: auto; margin-top: 30px; margin-left: 5px;"></div>
+                <div class="swiper-slide"><img src="ot8.jpg" alt=""
+                        style="width: 500px; height: auto; margin-top: 10px; margin-left: 5px;"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="swiper-button-next" style="margin-top: 1780px; margin-right: 200px;"></div>
+        <div class="swiper-button-prev" style="margin-top: 1780px; margin-left: 200px;"></div>
+
+        <img src="priz1.jpg" alt="" style="width: 900px; height: auto; margin-top: 15px;">
+
+        <div class="group2" style="margin-left: 350px; margin-top: 20px;">
+            <button id="order-button-2">Заказать</button>
+        </div>
+        <br>
+        <br>
+        <a
+            href="https://www.avito.ru/brands/e82f4ef78bb61d377e09b72c543e10b0/all?gdlkerfdnwq=101&page_from=from_item_card_icon&iid=1060202967&sellerId=7098fa842764bd610e3e9a67b8733b79"><img
+                src="av.jpg" alt="" style="width: 50px; height: auto; margin-left: 275px;"></a>
+        <a href="https://vk.com/razminka43"><img src="vk.jpg" alt=""
+                style="width: 50px; height: auto; margin-left: 100px;"></a>
+        <a href="https://t.me/razminka43"><img src="tg.jpg" alt=""
+                style="width: 50px; height: auto; margin-left: 100px;"></a>
+        <script src="script.js"></script>
+    </div>
+
+</body>
+
+</html>
